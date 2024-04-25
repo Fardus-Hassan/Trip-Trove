@@ -39,3 +39,7 @@
     object-fit: cover;
   }
   
+
+  .swiper-pagination-bullet-active{
+    background-color: #98C33A!important;
+  }
