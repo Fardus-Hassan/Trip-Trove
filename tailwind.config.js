@@ -9,7 +9,15 @@ export default module.exports = withMT({
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        heebo: ['Heebo', 'sans-serif'],
+        nunito: ['Nunito Sans', 'sans-serif'],
+      },
+      colors: {
+        pmColor: '#98C33A',
+      },
+    },
   },
   plugins: [require("daisyui")],
 });
