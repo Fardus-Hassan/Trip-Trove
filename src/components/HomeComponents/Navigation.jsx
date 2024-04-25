@@ -160,10 +160,10 @@ const Navigation = () => {
     }, []);
    
     return (
-      <Navbar className="mx-auto p-2 mt-7 fixed left-[50%] translate-x-[-50%] lg:pl-6">
+      <Navbar className="mx-auto bg-opacity-100 lg:rounded-3xl p-2 py-4 mt-7 fixed z-50 left-[50%] translate-x-[-50%] lg:pl-6">
         <div className="relative mx-auto flex items-center justify-between text-black">
 
-           <h1 className="mr-4 ml-2 cursor-pointer py-1.5 font-nunito text-2xl font-bold  flex-1 "> Trip <span className="text-pmColor">Trove</span></h1>
+           <h1 className="mr-4 ml-2 cursor-pointer py-1.5 font-nunito text-2xl font-black flex-1"> Trip <span className="text-pmColor">Trove</span></h1>
 
           <div className="hidden lg:block">
             <NavList />
