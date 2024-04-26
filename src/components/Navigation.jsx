@@ -179,8 +179,6 @@ const Navigation = () => {
     };
   }, []);
 
-  console.log(scrolled);
-
 
   return (
     <Navbar className={`mx-auto bg-opacity-100 lg:rounded-3xl p-2 md:py-4 duration-200 ${scrolled?"md:mt-4":"md:mt-20"} mt-2 md:w-full w-[98%] fixed z-50 left-[50%] translate-x-[-50%] lg:pl-6`}>

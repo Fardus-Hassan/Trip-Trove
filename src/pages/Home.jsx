@@ -1,6 +1,6 @@
 import About from "../components/HomeComponents/About";
 import Banner from "../components/HomeComponents/Banner/Banner";
-import TopNav from "../components/HomeComponents/TopNav";
+import TopNav from "../components/TopNav";
 
 
 const Home = () => {
