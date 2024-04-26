@@ -5,6 +5,8 @@ import OurServices from "../components/HomeComponents/OurServices";
 import Package from "../components/HomeComponents/Package/Package";
 import PopularDestination from "../components/HomeComponents/PopularDestination";
 import Process from "../components/HomeComponents/Process";
+import Review from "../components/HomeComponents/reviwe/Review";
+import TravelGuide from "../components/HomeComponents/TravelGuide";
 import TopNav from "../components/TopNav";
 
 
@@ -19,6 +21,8 @@ const Home = () => {
             <Package></Package>
             <Booking></Booking>
             <Process></Process>
+            <TravelGuide></TravelGuide>
+            <Review></Review>
         </div>
     );
 };
