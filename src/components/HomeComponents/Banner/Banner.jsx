@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 import './banner.css';
 
 // import required modules
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 
 
@@ -23,15 +23,16 @@ const Banner = () => {
         direction={'vertical'}
         slidesPerView={1}
         spaceBetween={0}
+        loop={true}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
         }}
-
+        navigation={true}
         pagination={{
           clickable: true,
         }}
-        modules={[Autoplay, Pagination]}
+        modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper max-w-full max-h-[90vh] h-[90vh] mb-10 sm:mb-[100px]"
       >
 

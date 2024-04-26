@@ -1,6 +1,8 @@
 import About from "../components/HomeComponents/About";
 import Banner from "../components/HomeComponents/Banner/Banner";
+import Booking from "../components/HomeComponents/Booking";
 import OurServices from "../components/HomeComponents/OurServices";
+import Package from "../components/HomeComponents/Package/Package";
 import PopularDestination from "../components/HomeComponents/PopularDestination";
 import TopNav from "../components/TopNav";
 
@@ -13,6 +15,8 @@ const Home = () => {
             <About></About>
             <OurServices></OurServices>
             <PopularDestination></PopularDestination>
+            <Package></Package>
+            <Booking></Booking>
         </div>
     );
 };

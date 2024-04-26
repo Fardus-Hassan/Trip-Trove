@@ -25,7 +25,7 @@ const About = () => {
                     <span className="flex justify-start items-center gap-2 text-black text-opacity-50 text-sm sm:text-[16px] font-heebo font-semibold"><FaArrowRight className="text-pmColor text-sm sm:text-lg"/> Sustainable Tourism</span>
          
                 </div>
-                <button className="sm:px-7 sm:mx-0 mx-auto block px-5 sm:py-4 py-3 text-white font-heebo font-medium sm:font-semibold mt-2 rounded-3xl bg-pmColor">Read More</button>
+                <button className="sm:px-7 sm:mx-0 mx-auto block px-5 sm:py-4 py-3 text-white font-heebo font-medium sm:font-semibold mt-2 rounded-xl bg-pmColor">Read More</button>
             </div>
         </div>
     );
