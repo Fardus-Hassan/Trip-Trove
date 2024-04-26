@@ -3,10 +3,10 @@ import SectionHeading from "../../utility/SectionHeading";
 
 const Booking = () => {
     return (
-        <div className="bg-img relative w-[95%] mx-auto rounded-3xl">
+        <div className="bg-img relative w-[95%] mx-auto rounded-3xl mb-10 sm:mb-[100px]">
 
 
-            <div className="flex xl:flex-row bg-black bg-opacity-50 rounded-3xl flex-col justify-center p-8 lg:p-20 items-center gap-10">
+            <div className="flex xl:flex-row bg-black bg-opacity-50 rounded-3xl flex-col justify-center p-8 lg:p-20 lg:py-36 items-center gap-10">
                 <div className="xl:w-[40%] xl:text-left text-center">
 
                     <div className="xl:ml-24">

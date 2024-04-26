@@ -4,6 +4,7 @@ import Booking from "../components/HomeComponents/Booking";
 import OurServices from "../components/HomeComponents/OurServices";
 import Package from "../components/HomeComponents/Package/Package";
 import PopularDestination from "../components/HomeComponents/PopularDestination";
+import Process from "../components/HomeComponents/Process";
 import TopNav from "../components/TopNav";
 
 
@@ -17,6 +18,7 @@ const Home = () => {
             <PopularDestination></PopularDestination>
             <Package></Package>
             <Booking></Booking>
+            <Process></Process>
         </div>
     );
 };
