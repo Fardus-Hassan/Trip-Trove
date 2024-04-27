@@ -30,7 +30,7 @@ const Router = createBrowserRouter([
                 element: <Register></Register>
             },
             {
-                path:"/all-tourists-sports",
+                path:"/all-tourists-spots",
                 element:<AllTouristsSpot></AllTouristsSpot>
             },
             {
@@ -38,7 +38,7 @@ const Router = createBrowserRouter([
                 element: <Details></Details>
             },
             {
-                path:"/add-tourists-sport",
+                path:"/add-tourists-spot",
                 element:<PrivateRoute><AddTouristsSpot></AddTouristsSpot></PrivateRoute>
             },
             {

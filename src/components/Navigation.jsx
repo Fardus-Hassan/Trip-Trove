@@ -175,8 +175,8 @@ function NavList() {
             : isPending
               ? ''
               : ""
-        } to="/all-tourists-sports">
-          All Tourists Sports
+        } to="/all-tourists-spots">
+          All Tourists Spots
         </NavLink>
       </Typography>
       {
@@ -190,15 +190,15 @@ function NavList() {
             : isPending
               ? ''
               : ""
-        } to="/add-tourists-sport">
-            Add Tourists Sport
+        } to="/add-tourists-spot">
+            Add Tourists Spot
           </NavLink>
         </Typography>
       }
       {
         user && <Typography
 
-          className="p-2 font-heebo font-semibold text-sm text-black hover:text-pmColor"
+          className="p-2 font-heebo font-semibold text-sm mr-6 text-black hover:text-pmColor"
         >
           <NavLink className={({ isActive, isPending }) =>
           isActive

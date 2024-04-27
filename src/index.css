@@ -10,6 +10,18 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+.bg-img2 {
+    background-image: url('https://images.pexels.com/photos/2847894/pexels-photo-2847894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.bg-img3 {
+    background-image: url('https://images.pexels.com/photos/2161547/pexels-photo-2161547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
 /* 
 .peer{
     background-color: #98C33A4D;

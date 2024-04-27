@@ -18,10 +18,10 @@ const UpdateProfile = () => {
     }
 
     return (
-        <div className="max-w-[1440px] w-[95%] mx-auto md:my-20 md:min-h-[78vh] min-h-[100vh] flex justify-center items-center">
+        <div className="bg-img3 mx-auto md:min-h-[100vh] text-white min-h-[100vh] flex justify-center items-center">
             {/* <SiteTittle title={'Update-Profile'}></SiteTittle> */}
-            <div className=" md:flex-row flex-col gap-10 flex justify-center items-center md:mt-0 mt-20 py-10">
-                <div className="md:border-r-2 md:border-b-0 border-b-2 border-pmColor border-dashed md:pb-0 pb-6 md:pr-10">
+            <div className=" md:flex-row bg-black bg-opacity-50 w-full min-h-[100vh] flex-col gap-10 flex justify-center items-center md:pt-0 pt-32 pb-6">
+                <div className="md:border-r-2 md:border-b-0 border-b-2 md:w-fit w-[80%] border-pmColor border-dashed md:pb-0 pb-6 md:pr-10">
                     <div className="flex lg:flex-row gap-6 flex-col justify-center items-center">
                         <div>
                             <img className="rounded-[100%] h-[250px] object-cover w-[250px]" src={user.photoURL || "https://cdn-icons-png.flaticon.com/512/64/64572.png"} alt="" />
@@ -32,13 +32,13 @@ const UpdateProfile = () => {
                         </div>
                     </div>
                 </div>
-                <form onSubmit={handleUpdateProfile} className="space-y-8">
+                <form onSubmit={handleUpdateProfile} className="space-y-8 w-[80%] lg:w-[25%] md:w-[40%]">
 
                     <div className="relative w-full h-10 mb-5">
                         <input
                             defaultValue={user.displayName}
                             name="name" type="text"
-                            className="peer w-full h-full bg-transparent text-blue-gray-700 font-inter font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-pmColor placeholder-shown:border-t-pmColor border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] <border-pmC></border-pmC> focus:border-pmColor"
+                            className="peer w-full h-full bg-transparent text-white font-inter font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-pmColor placeholder-shown:border-t-pmColor border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] <border-pmC></border-pmC> focus:border-pmColor"
                             placeholder=" " /><label
                                 className="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-pmColor leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-pmColor transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-pmColor peer-focus:text-pmColor before:border-pmColor peer-focus:before:!border-pmColor after:border-pmColor peer-focus:after:!border-pmColor">Name
                         </label>
@@ -47,7 +47,7 @@ const UpdateProfile = () => {
                         <input
                             defaultValue={user.photoURL}
                             name="photoURL" type="text"
-                            className="peer w-full h-full bg-transparent text-blue-gray-700 font-inter font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-pmColor placeholder-shown:border-t-pmColor border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] <border-pmC></border-pmC> focus:border-pmColor"
+                            className="peer w-full h-full bg-transparent text-white font-inter font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-pmColor placeholder-shown:border-t-pmColor border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] <border-pmC></border-pmC> focus:border-pmColor"
                             placeholder=" " /><label
                                 className="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-pmColor leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-pmColor transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-pmColor peer-focus:text-pmColor before:border-pmColor peer-focus:before:!border-pmColor after:border-pmColor peer-focus:after:!border-pmColor">PhotoURL
                         </label>
