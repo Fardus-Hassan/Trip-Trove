@@ -21,7 +21,7 @@ const packCard = () => {
                     <span className="flex justify-center items-center gap-1 mt-2 mb-6"><FaStar className="text-pmColor text-xl" /><FaStar className="text-pmColor text-xl" /><FaStar className="text-pmColor text-xl" /><FaStar className="text-pmColor text-xl" /><FaStar className="text-pmColor text-xl" /></span>
                     <p className="text-center font-heebo text-base text-black text-opacity-60 font-medium">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos</p>
 
-                    <button className="sm:px-7 mt-5 mx-auto block px-5 sm:py-4 py-3 text-white font-heebo font-medium sm:font-semibold mt-2 rounded-xl bg-pmColor mb-5">View Details page</button>
+                    <button className="sm:px-7 mt-5 mx-auto block px-5 sm:py-4 py-3 text-white font-heebo font-medium sm:font-semibold rounded-xl bg-pmColor mb-5">View Details page</button>
                 </div>
             </div>
         </div>

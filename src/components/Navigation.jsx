@@ -50,7 +50,7 @@ function ProfileMenu() {
 
   return (
     <Menu open={isMenuOpen} handler={setIsMenuOpen} placement="bottom-end">
-      {/* <MenuHandler>
+      <MenuHandler>
         <Button
           variant="text"
           color="blue-gray"
@@ -65,9 +65,8 @@ function ProfileMenu() {
           />
           <ChevronDownIcon
             strokeWidth={2.5}
-            className={`h-3 w-3 transition-transform ${
-              isMenuOpen ? "rotate-180" : ""
-            }`}
+            className={`h-3 w-3 transition-transform ${isMenuOpen ? "rotate-180" : ""
+              }`}
           />
         </Button>
       </MenuHandler>
@@ -78,11 +77,10 @@ function ProfileMenu() {
             <MenuItem
               key={label}
               onClick={closeMenu}
-              className={`flex items-center gap-2 rounded ${
-                isLastItem
+              className={`flex items-center gap-2 rounded ${isLastItem
                   ? "hover:bg-red-500/10 focus:bg-red-500/10 active:bg-red-500/10"
                   : ""
-              }`}
+                }`}
             >
               {React.createElement(icon, {
                 className: `h-4 w-4 ${isLastItem ? "text-red-500" : ""}`,
@@ -99,7 +97,7 @@ function ProfileMenu() {
             </MenuItem>
           );
         })}
-      </MenuList> */}
+      </MenuList>
     </Menu>
   );
 }
@@ -181,7 +179,7 @@ const Navigation = () => {
 
 
   return (
-    <Navbar className={`mx-auto bg-opacity-100 lg:rounded-3xl p-2 md:py-4 duration-200 ${scrolled?"md:mt-4":"md:mt-20"} mt-2 md:w-full w-[98%] fixed z-50 left-[50%] translate-x-[-50%] lg:pl-6`}>
+    <Navbar className={`mx-auto bg-opacity-100 lg:rounded-3xl p-2 md:py-4 duration-200 ${scrolled ? "md:-mt-10" : "md:mt-4"} mt-2 md:w-full w-[98%] fixed z-50 left-[50%] translate-x-[-50%] lg:pl-6`}>
       <div className="relative mx-auto flex items-center justify-between text-black">
 
         <h1 className="mr-4 ml-2 cursor-pointer py-1.5 font-nunito text-2xl font-black flex-1"> Trip <span className="text-pmColor">Trove</span></h1>
@@ -199,9 +197,11 @@ const Navigation = () => {
           <Bars2Icon className="h-6 w-6" />
         </IconButton>
 
-        <Button size="sm" variant="text" className="sm:ml-6 md:mr-6 bg-pmColor hover:text-black text-white">
-          <span>Log In</span>
-        </Button>
+        <Link to='/login'>
+          <Button size="sm" variant="text" className="sm:ml-6 md:mr-6 bg-pmColor hover:text-black text-white">
+            <span>Log In</span>
+          </Button>
+        </Link>
         <ProfileMenu />
       </div>
       <MobileNav open={isNavOpen} className="overflow-scroll">
