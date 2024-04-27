@@ -1,11 +1,60 @@
 import { Checkbox, Typography } from "@material-tailwind/react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+import { useForm } from "react-hook-form";
+import { useContext, useState } from "react";
+import { GoogleAuthProvider, signInWithPopup, GithubAuthProvider } from "firebase/auth";
+import { GlobalStateContext } from "../GlobalContext/GlobalContext";
+import { auth } from "../firebase.config";
 
 
 const Login = () => {
 
+    const { login } = useContext(GlobalStateContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const form = location?.state || '/';
+    const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
+    const [error, setError] = useState(null)
     const [showPassword, setShowPassword] = useState(false)
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm()
+
+
+    const handleProvider = (provider) => {
+
+        return signInWithPopup(auth, provider).then(result => {
+            if (result.user) {
+
+                toast.success('Login Successfully');
+                navigate(form);
+            }
+        }).catch(error => {
+            console.log(error);
+        })
+    }
+
+
+    const onSubmit = (data) => {
+        setError('')
+        const { email, password } = data;
+        login(email, password).then((result) => {
+            if (result.user) {
+                navigate(form);
+                toast.success('Login Successfully');
+            }
+        })
+            .catch((error) => {
+
+                setError(error.message)
+            });
+    }
+
 
     return (
         <div className="relative">
@@ -22,51 +71,54 @@ const Login = () => {
                                 Welcome to a world of possibilities! Sign in now to explore our website's full potential and discover amazing experiences tailored just for you.</p>
                         </div> */}
                         <div className="border border-pmColor lg:min-w-[35%] lg:mt-0 mt-[100px] rounded-3xl p-5 lg:p-10">
-                            <form>
+                            <form onSubmit={handleSubmit(onSubmit)}>
                                 <h1 className="text-white text-center text-[32px] sm:text-[40px] font-nunito font-bold mb-5">Login Here</h1>
 
                                 <p className="font-heebo sm:mb-10 mb-6 text-[14px] text-center text-white text-opacity-80 font-semibold">Welcome Back! Login to Unlock Exclusive Benefits!</p>
 
                                 <div className="relative w-full h-10 mb-5">
                                     <input
-                                        name="email" type="email"
+                                        name="email" type="email" {...register("email", { required: true })}
                                         className="peer w-full h-full bg-transparent text-white font-inter font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-pmColor"
                                         placeholder=" " /><label
                                             className="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-pmColor leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-pmColor transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-pmColor peer-focus:text-pmColor before:border-blue-gray-200 peer-focus:before:!border-pmColor after:border-pmColor peer-focus:after:!border-pmColor">Email
                                     </label>
-                                    {/* {errors.email && <span className="text-xs text-red-500">This Email field is required</span>} */}
+                                    {errors.email && <span className="text-xs text-red-500">This Email field is required</span>}
                                 </div>
                                 <div className="relative w-full h-10 mb-2">
                                     <input
-                                        name="password"
+                                        name="password" {...register("password", { required: true })}
                                         type={showPassword ? 'text' : 'password'}
                                         className="peer w-full h-full bg-transparent text-white font-inter font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-pmColor"
                                         placeholder=" " /><label
                                             className="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-pmColor leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-pmColor transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-pmColor peer-focus:text-pmColor before:border-blue-gray-200 peer-focus:before:!border-pmColor after:border-pmColor peer-focus:after:!border-pmColor">Password
                                     </label>
                                     {showPassword ? <img onClick={() => setShowPassword(!showPassword)} className="w-5 h-5 absolute top-[50%] translate-y-[-50%] right-3" src="https://i.ibb.co/3fxNPxp/view.png" alt="" /> : <img onClick={() => setShowPassword(!showPassword)} className="w-5 h-5 absolute top-[50%] translate-y-[-50%] right-3" src="https://i.ibb.co/pj04qyJ/hide.png" alt="" />}
-                                    {/* {errors.password && <span className="text-xs text-red-500">This Password field is required</span>} */}
+                                    {errors.password && <span className="text-xs text-red-500">This Password field is required</span>}
                                 </div>
+                                {error && <span className="text-xs text-red-500">{error === "Firebase: Error (auth/invalid-credential)." ? "This user cannot be found" : 'Something is wrong. Try again later'}</span>}
                                 <div className="mb-2">
-                                        <Checkbox
+                                    <Checkbox
                                         className="bg-opacity-30 bg-pmColor"
-                                            label={
-                                                <Typography
-                                                    variant="small"
-                                                    className="flex items-center font-normal text-pmColor"
+                                        label={
+                                            <Typography
+                                                variant="small"
+                                                className="flex items-center font-normal text-pmColor"
+                                            >
+                                                Remember me
+                                                <a
+                                                    href="#"
+                                                    className="font-medium transition-colors hover:text-white"
                                                 >
-                                                    Remember me
-                                                    <a
-                                                        href="#"
-                                                        className="font-medium transition-colors hover:text-white"
-                                                    >
-                                                    </a>
-                                                </Typography>
-                                            }
-                                            containerProps={{ className: "-ml-2.5" }}
-                                        />
-                                    </div>
-                                <button className="group relative w-full inline-flex bg-opacity-70 bg-pmColor h-12 items-center justify-center overflow-hidden rounded-md px-6 font-medium text-neutral-200">
+                                                </a>
+                                            </Typography>
+                                        }
+                                        containerProps={{ className: "-ml-2.5" }}
+                                    />
+                                </div>
+                                <button
+
+                                    className="group relative w-full inline-flex bg-opacity-70 bg-pmColor h-12 items-center justify-center overflow-hidden rounded-md px-6 font-medium text-neutral-200">
                                     <span>Login</span>
                                     <div className="w-0 translate-x-[100%] pl-0 opacity-0 transition-all duration-200 group-hover:w-5 group-hover:translate-x-0 group-hover:pl-1 group-hover:opacity-100">
                                         <svg
@@ -91,7 +143,7 @@ const Login = () => {
                                 <div className="flex lg:flex-row flex-col items-center justify-between mb-5 mt-4 gap-3">
 
                                     <button
-                                        // onClick={() => handleProvider(googleProvider)}
+                                        onClick={() => handleProvider(googleProvider)}
                                         className="flex items-center flex-nowrap text-nowrap justify-center bg-pmColor px-4 bg-opacity-40 border border-gray-300 rounded-lg shadow-md w-full py-2 text-sm font-medium text-white hover:bg-opacity-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
                                         <svg className="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg"
                                             viewBox="-0.5 0 48 48" version="1.1">
@@ -119,7 +171,7 @@ const Login = () => {
                                     </button>
 
                                     <button
-                                        // onClick={() => handleProvider(githubProvider)}
+                                        onClick={() => handleProvider(githubProvider)}
                                         className="flex items-center justify-center bg-pmColor bg-opacity-40 border px-4 border-gray-300 rounded-lg shadow-md w-full text-center py-2 text-sm font-medium text-white hover:bg-opacity-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
                                         <svg className="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 73 73" version="1.1">
