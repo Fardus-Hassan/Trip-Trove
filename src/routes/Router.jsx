@@ -8,6 +8,7 @@ import AddTouristsSpot from "../pages/AddTouristsSpot";
 import MyList from "../pages/MyList";
 import UpdateProfile from "../pages/UpdateProfile";
 import PrivateRoute from "./PrivateRoute";
+import Details from "../pages/Details";
 
 
 const Router = createBrowserRouter([
@@ -34,15 +35,15 @@ const Router = createBrowserRouter([
             },
             {
                 path:"/tourist-spot/:id",
-                element: <h1>Details</h1>
+                element: <Details></Details>
             },
             {
-                path:"/add-tourists-sport/",
-                element:<AddTouristsSpot></AddTouristsSpot>
+                path:"/add-tourists-sport",
+                element:<PrivateRoute><AddTouristsSpot></AddTouristsSpot></PrivateRoute>
             },
             {
-                path:"my-list",
-                element: <MyList></MyList>
+                path:"/my-list",
+                element: <PrivateRoute><MyList></MyList></PrivateRoute>
             },
             {
                 path:"/update-profile",

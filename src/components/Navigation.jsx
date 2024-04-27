@@ -18,7 +18,7 @@ import {
   PowerIcon,
   Bars2Icon,
 } from "@heroicons/react/24/solid";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { GlobalStateContext } from "../GlobalContext/GlobalContext";
 
 
@@ -36,7 +36,7 @@ const profileMenuItems = [
 
   },
   {
-    label: "Sign Out",
+    label: "Log Out",
     icon: PowerIcon,
     func: "logout"
   },
@@ -153,36 +153,64 @@ function NavList() {
     <ul className="mb-4 flex flex-col text-black mt-4 lg:gap-5 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
       <Typography
 
-        className="p-2 font-heebo font-semibold text-sm text-black"
+        className="p-2 font-heebo font-semibold text-sm text-black hover:text-pmColor"
       >
-        <Link to="/" className="flex items-center hover:text-pmColor transition-colors">
+        <NavLink className={({ isActive, isPending }) =>
+          isActive
+            ? 'text-pmColor'
+            : isPending
+              ? ''
+              : ""
+        } to="/">
           Home
-        </Link>
+        </NavLink>
       </Typography>
       <Typography
 
-        className="p-2 font-heebo font-semibold text-sm text-black"
+        className="p-2 font-heebo font-semibold text-sm text-black hover:text-pmColor"
       >
-        <Link to="/all-tourists-sports" className="flex items-center hover:text-pmColor transition-colors">
+        <NavLink className={({ isActive, isPending }) =>
+          isActive
+            ? 'text-pmColor'
+            : isPending
+              ? ''
+              : ""
+        } to="/all-tourists-sports">
           All Tourists Sports
-        </Link>
+        </NavLink>
       </Typography>
-      <Typography
+      {
+        user && <Typography
 
-        className="p-2 font-heebo font-semibold text-sm text-black"
-      >
-        <Link to="/add-tourists-sport" className="flex items-center hover:text-pmColor transition-colors">
-          Add Tourists Sport
-        </Link>
-      </Typography>
-      <Typography
+          className="p-2 font-heebo font-semibold text-sm text-black hover:text-pmColor"
+        >
+          <NavLink className={({ isActive, isPending }) =>
+          isActive
+            ? 'text-pmColor'
+            : isPending
+              ? ''
+              : ""
+        } to="/add-tourists-sport">
+            Add Tourists Sport
+          </NavLink>
+        </Typography>
+      }
+      {
+        user && <Typography
 
-        className="p-2 font-heebo font-semibold text-sm text-black"
-      >
-        <Link to="/my-list" className="flex items-center hover:text-pmColor transition-colors md:mr-6">
-          My List
-        </Link>
-      </Typography>
+          className="p-2 font-heebo font-semibold text-sm text-black hover:text-pmColor"
+        >
+          <NavLink className={({ isActive, isPending }) =>
+          isActive
+            ? 'text-pmColor'
+            : isPending
+              ? ''
+              : ""
+        } to="/my-list">
+            My List
+          </NavLink>
+        </Typography>
+      }
     </ul>
   );
 }
@@ -244,7 +272,7 @@ const Navigation = () => {
 
         {
           user ? "" : <Link to='/login'>
-            <Button size="sm" variant="text" className="bg-pmColor hover:text-black text-white lg:mr-6">
+            <Button size="sm" variant="text" className={`bg-pmColor ${user ? "" : "sm:ml-6"} hover:text-black text-white lg:mr-6`}>
               <span>Log In</span>
             </Button>
           </Link>

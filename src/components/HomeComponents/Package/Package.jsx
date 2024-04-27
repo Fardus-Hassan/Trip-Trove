@@ -3,7 +3,7 @@ import SectionHeading from "../../../utility/SectionHeading";
 import SectionTitle from "../../../utility/SectionTitle";
 import PackCard from "./PackCard";
 
-const initialCards = [1, 2, 3, 4, 5, 6,7,8,9,10,11,12]; // Your initial list of cards
+const initialCards = [1, 2, 3, 4, 5, 6]; // Your initial list of cards
 
 const Package = () => {
     const [cards, setCards] = useState(initialCards.slice(0, 3)); // Initially show three cards
