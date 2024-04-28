@@ -6,9 +6,9 @@ import React, { useRef, useState } from 'react';
 
 const packCard = () => {
     return (
-        <div className="shadow-2xl rounded-2xl mb-6">
+        <div className="shadow-2xl rounded-3xl mb-6">
             <div className="h-[350px]">
-                <img className="h-[350px] w-full" src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Sunset_at_Patenga_beach.jpg" alt="" />
+                <img className="h-[350px] rounded-t-3xl w-full" src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Sunset_at_Patenga_beach.jpg" alt="" />
             </div>
             <div>
                 <div className="border-b border-pmColor lg:space-y-0 space-y-2 flex lg:flex-row flex-col justify-center items-center">

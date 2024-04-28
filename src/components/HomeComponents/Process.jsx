@@ -11,7 +11,7 @@ const Process = () => {
                 <SectionHeading>PROCESS</SectionHeading>
                 <SectionTitle>3 Easy Steps</SectionTitle>
             </div>
-            <div className="mt-24 grid lg:grid-cols-3 sm:grid-cols-2 gap-6">
+            <div className="mt-24 grid lg:grid-cols-3 sm:grid-cols-2 gap-6 *:rounded-3xl">
                 <div className="border border-pmColor border-solid text-center p-5 relative">
                     <span className="bg-pmColor inline-block p-4 absolute top-[0] left-[50%] translate-y-[-60%] translate-x-[-50%] text-white text-7xl rounded-full">
                         <TbWorld />

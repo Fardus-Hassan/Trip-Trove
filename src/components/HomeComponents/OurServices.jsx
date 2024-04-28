@@ -9,7 +9,7 @@ const OurServies = () => {
                 <SectionHeading>SERVICES</SectionHeading>
                 <SectionTitle>Our Services</SectionTitle>
             </div>
-            <div className="mt-10 grid lg:grid-cols-4 sm:grid-cols-2 gap-5">
+            <div className="mt-10 grid lg:grid-cols-4 sm:grid-cols-2 gap-5 *:rounded-3xl">
                 <div className="shadow-lg hover:shadow-pmColor hover:scale-105 duration-300 p-6">
                     <img className="w-20 sm:mx-0 mx-auto" src="https://i.ibb.co/Brj3wbk/tour-guide.png" alt="" />
                     <h3 className="text-black sm:text-left text-center text-opacity-90 font-nunito text-xl my-3 font-semibold">Travel Guides</h3>

@@ -9,13 +9,15 @@ import MyList from "../pages/MyList";
 import UpdateProfile from "../pages/UpdateProfile";
 import PrivateRoute from "./PrivateRoute";
 import Details from "../pages/Details";
+import UpdataData from "../pages/UpdataData";
+import Error from "../pages/Error";
 
 
 const Router = createBrowserRouter([
     {
         path: "/",
         element: <Root />,
-        errorElement: <h1>Opps......404</h1>,
+        errorElement: <Error></Error>,
         children: [
             {
                 path: "/",
@@ -43,11 +45,17 @@ const Router = createBrowserRouter([
             },
             {
                 path:"/my-list",
-                element: <PrivateRoute><MyList></MyList></PrivateRoute>
+                element: <PrivateRoute><MyList></MyList></PrivateRoute>,
+                loader: () => fetch('http://localhost:3000/touristSpots')
             },
             {
                 path:"/update-profile",
                 element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
+            },
+            {
+                path:"/update-data/:id",
+                element: <PrivateRoute><UpdataData></UpdataData></PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:3000/touristSpots/${params.id}`)
             }
 
         ],

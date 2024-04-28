@@ -10,6 +10,8 @@ const PrivateRoute = ({ children }) => {
 
     const { user, loading } = useContext(GlobalStateContext);
 
+    console.log(user);
+
     
     
      if (loading) {
