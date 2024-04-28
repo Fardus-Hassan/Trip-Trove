@@ -56,6 +56,10 @@ const Router = createBrowserRouter([
                 path:"/update-data/:id",
                 element: <PrivateRoute><UpdataData></UpdataData></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:3000/touristSpots/${params.id}`)
+            },
+            {
+                path:"/details",
+                element: <PrivateRoute><Details></Details></PrivateRoute>
             }
 
         ],

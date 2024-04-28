@@ -1,7 +1,7 @@
 
 const ReviewCard = () => {
     return (
-        <div className="sm:mb-[100px] border-none mb-10 bg-pmColor bg-opacity-50 rounded-3xl">
+        <div className="sm:mb-[100px] border-none mb-10 bg-pmColor bg-opacity-80 rounded-3xl">
             <div className=" lg:mt-0 border-none mt-14 text-center p-5 relative">
                 <span className=" text-black text-7xl rounded-full  w-10 h-10">
                     <img className="max-w-32 max-h-32 object-cover border-4 border-white  mx-auto rounded-full" src="https://i.pinimg.com/564x/94/21/55/942155b73e3ad9184c190f08aca149d6.jpg" alt="" />

@@ -25,7 +25,7 @@ const Package = () => {
         <div className="max-w-[1440px] w-[95%] mx-auto mb-10 sm:mb-[100px]">
             <div className="text-center mb-10">
                 <SectionHeading>PACKAGES</SectionHeading>
-                <SectionTitle>Awesome Packages</SectionTitle>
+                <SectionTitle>Tourists Spots</SectionTitle>
             </div>
             <div className="grid 2xl:grid-cols-3 md:grid-cols-2 gap-5">
                 {cards.map((item, i) => (

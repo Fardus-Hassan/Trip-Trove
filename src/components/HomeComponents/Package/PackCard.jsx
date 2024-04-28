@@ -3,6 +3,7 @@ import { FaStar, FaCalendarAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoPerson } from "react-icons/io5";
 import React, { useRef, useState } from 'react';
+import { Link } from "react-router-dom";
 
 const packCard = () => {
     return (
@@ -21,7 +22,9 @@ const packCard = () => {
                     <span className="flex justify-center items-center gap-1 mt-2 mb-6"><FaStar className="text-pmColor text-xl" /><FaStar className="text-pmColor text-xl" /><FaStar className="text-pmColor text-xl" /><FaStar className="text-pmColor text-xl" /><FaStar className="text-pmColor text-xl" /></span>
                     <p className="text-center font-heebo text-base text-black text-opacity-60 font-medium">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos</p>
 
-                    <button className="sm:px-7 mt-5 mx-auto block px-5 sm:py-4 py-3 text-white font-heebo font-medium sm:font-semibold rounded-xl bg-pmColor mb-5">View Details page</button>
+                    <Link to={`/details`}>
+                        <button className="sm:px-7 mt-5 mx-auto block px-5 sm:py-4 py-3 text-white font-heebo font-medium sm:font-semibold rounded-xl bg-pmColor mb-5">View Details page</button>
+                    </Link>
                 </div>
             </div>
         </div>
