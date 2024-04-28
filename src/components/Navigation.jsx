@@ -185,12 +185,12 @@ function NavList() {
           className="p-2 font-heebo font-semibold text-sm text-black hover:text-pmColor"
         >
           <NavLink className={({ isActive, isPending }) =>
-          isActive
-            ? 'text-pmColor'
-            : isPending
-              ? ''
-              : ""
-        } to="/add-tourists-spot">
+            isActive
+              ? 'text-pmColor'
+              : isPending
+                ? ''
+                : ""
+          } to="/add-tourists-spot">
             Add Tourists Spot
           </NavLink>
         </Typography>
@@ -201,12 +201,12 @@ function NavList() {
           className="p-2 font-heebo font-semibold text-sm mr-6 text-black hover:text-pmColor"
         >
           <NavLink className={({ isActive, isPending }) =>
-          isActive
-            ? 'text-pmColor'
-            : isPending
-              ? ''
-              : ""
-        } to="/my-list">
+            isActive
+              ? 'text-pmColor'
+              : isPending
+                ? ''
+                : ""
+          } to="/my-list">
             My List
           </NavLink>
         </Typography>
