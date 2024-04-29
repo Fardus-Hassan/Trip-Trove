@@ -7,9 +7,9 @@ import { useLoaderData } from "react-router-dom";
 
 const UpdataData = () => {
 
-    const singleData = useLoaderData() 
+    const singleData = useLoaderData()
 
-    const { short_description, travel_time, totalVisitorsPerYear, seasonality, average_cost, location, tourists_spot_name, image, country_name, image2, image3, _id } = singleData;
+    const { short_description, travel_time, totalVisitorsPerYear, seasonality, average_cost, location, tourists_spot_name, img: [image, image2, image3], country_name, _id } = singleData;
 
 
 
@@ -18,18 +18,14 @@ const UpdataData = () => {
     const { displayName, email } = user
 
 
-    // console.log(user);
-
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm()
 
-    // const [error, setError] = useState(null)
 
     const onSubmit = (data) => {
-        // setError('')
 
         const { short_description, travel_time, totalVisitorsPerYear, seasonality, average_cost, location, tourists_spot_name, image, country_name, image2, image3 } = data;
 
@@ -47,7 +43,7 @@ const UpdataData = () => {
                 average_cost,
                 location,
                 tourists_spot_name,
-                img : [image, image2, image3],
+                img: [image, image2, image3],
                 country_name,
                 displayName,
                 email
@@ -66,9 +62,9 @@ const UpdataData = () => {
     }
 
     return (
-        <div className="bg-img2 xl:h-[100vh] min-h-[100vh]">
+        <div className="bg-img4 xl:h-[100vh] min-h-[100vh]">
 
-            <div className="flex xl:flex-row xl:pt-0 pt-32 p-8 bg-black bg-opacity-50 flex-col justify-center xl:h-[100vh] min-h-[100vh] w-full items-center gap-10">
+            <div className="flex xl:flex-row xl:pt-0 pt-32 p-8 bg-black bg-opacity-60 flex-col justify-center xl:h-[100vh] min-h-[100vh] w-full items-center gap-10">
                 <div className="xl:w-[40%] xl:text-left text-center">
 
                     <div className="xl:ml-24">

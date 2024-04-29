@@ -1,12 +1,11 @@
-import SectionHeading from "../../utility/SectionHeading";
+import SectionHeading from "../utility/SectionHeading";
 
-
-const Booking = () => {
+const BookNow = () => {
     return (
-        <div className="bg-img relative md:w-[98%] w-[95%] mx-auto rounded-3xl mb-10 sm:mb-[100px]">
+        <div className="bg-img5 xl:h-[100vh] min-h-[100vh]">
 
 
-            <div className="flex xl:flex-row bg-black bg-opacity-50 rounded-3xl flex-col justify-center p-8 lg:p-20 lg:py-36 items-center gap-10">
+            <div className="flex xl:flex-row xl:pt-0 pt-32 p-8 bg-black bg-opacity-50 flex-col justify-center xl:h-[100vh] min-h-[100vh] w-full items-center gap-10">
                 <div className="xl:w-[40%] xl:text-left text-center">
 
                     <div className="xl:ml-24">
@@ -72,7 +71,7 @@ const Booking = () => {
                             {/* {errors.email && <span className="text-xs text-red-500">This Email field is required</span>} */}
                         </div>
                     </div>
-                    <label className="input input-bordered border w-full border-pmColor text-white flex bg-pmColor bg-opacity-50 items-center gap-2">
+                    <label className="input input-bordered border w-full border-pmColor text-white flex bg-pmColor bg-opacity-70 items-center gap-2">
                         <input type="Submit" value='Book Now' className="grow w-full block" />
                     </label>
                 </form>
@@ -82,4 +81,4 @@ const Booking = () => {
     );
 };
 
-export default Booking;
+export default BookNow;

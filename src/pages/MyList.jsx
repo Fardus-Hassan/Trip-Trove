@@ -1,15 +1,25 @@
 import { Button } from "@material-tailwind/react";
-import { useState } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { GlobalStateContext } from "../GlobalContext/GlobalContext";
 
 
 const MyList = () => {
 
-    const info = useLoaderData()
+    const {user} = useContext(GlobalStateContext);
 
-    const [data, setData] = useState(info)
 
+    const [data, setData] = useState([])
+
+    useEffect(()=>{
+        fetch(`http://localhost:3000/touristSpots/myList/${user.email}`)
+        .then(response => response.json())
+        .then(data =>{
+            console.log(data);
+            setData(data);
+        })
+    },[user.email])
 
 
     const handleDelete = (_id) => {
@@ -28,9 +38,10 @@ const MyList = () => {
                     method: "DELETE",
                 })
                 .then(res => res.json())
-                .then(data => {
+                .then(info => {
                     const updatedData = data.filter(item => item._id !== _id);
                     setData(updatedData);
+                    console.log(updatedData);
                 })
                 Swal.fire({
                     title: "Deleted!",
@@ -49,7 +60,7 @@ const MyList = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-current shrink-0 w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     <div>
                         <h3 className="font-bold">No Information</h3>
-                        <div className="text-xs">Add some Information</div>
+                        <div className="text-xs">Want to add some information ?</div>
                     </div>
                     <Link to='/add-tourists-spot'><button className="btn btn-sm bg-pmColor text-white">Add</button></Link>
                 </div> : <div className="overflow-x-auto">

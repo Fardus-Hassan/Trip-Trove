@@ -11,6 +11,7 @@ import PrivateRoute from "./PrivateRoute";
 import Details from "../pages/Details";
 import UpdataData from "../pages/UpdataData";
 import Error from "../pages/Error";
+import BookNow from "../pages/BookNow";
 
 
 const Router = createBrowserRouter([
@@ -46,7 +47,6 @@ const Router = createBrowserRouter([
             {
                 path:"/my-list",
                 element: <PrivateRoute><MyList></MyList></PrivateRoute>,
-                loader: () => fetch('http://localhost:3000/touristSpots')
             },
             {
                 path:"/update-profile",
@@ -58,8 +58,13 @@ const Router = createBrowserRouter([
                 loader: ({params}) => fetch(`http://localhost:3000/touristSpots/${params.id}`)
             },
             {
-                path:"/details",
-                element: <PrivateRoute><Details></Details></PrivateRoute>
+                path:"/details/:id",
+                element: <PrivateRoute><Details></Details></PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:3000/touristSpots/${params.id}`)
+            },
+            {
+                path: "/book-now",
+                element: <BookNow></BookNow>
             }
 
         ],

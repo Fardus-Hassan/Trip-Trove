@@ -17,9 +17,13 @@ export default module.exports = withMT({
       colors: {
         pmColor: '#98C33A',
       },
-      
+
     },
   },
   plugins: [require("daisyui")],
+
+  // daisyui: {
+  //   themes: ["light", "night"],
+  // },
 });
 
