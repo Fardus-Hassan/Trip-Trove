@@ -50,7 +50,7 @@ const Banner = () => {
           <div className="w-full h-full bg-opacity-50 bg-black absolute top-0 z-10"></div>
         </SwiperSlide>
         <div className='absolute top-[50%] translate-y-[-50%] text-center z-30 left-[50%] translate-x-[-50%] w-[90%]'>
-          <h1 className='text-white lg:text-[46px] text-[35px] font-nunito font-black italic'>Elevate Your Tourism <span className='text-pmColor'><Typewriter
+          <h1 className='text-white lg:text-[46px] text-[35px] font-nunito font-black'>Elevate Your Tourism <span className='text-pmColor'><Typewriter
             words={['Experience', 'Destinations', 'Adventures']}
             typeSpeed={100}
             deleteSpeed={50}

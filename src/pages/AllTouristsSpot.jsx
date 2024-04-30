@@ -22,11 +22,25 @@ const AllTouristsSpot = () => {
             })
     }, [])
 
+
+    const handleSort = () => {
+        const sortedInfo = [...info].sort((a, b) => a.average_cost - b.average_cost);
+        setInfo(sortedInfo);
+    };
+
     return (
-        <div className="max-w-[1440px] w-[95%] mx-auto   md:pt-[150px] pt-[100px] pb-10 mb-10">
+        <div className="max-w-[1440px] w-[95%] mx-auto md:pt-[150px] pt-[100px] pb-10 mb-10">
             <div className="text-center mb-10">
                 <SectionHeading>Places</SectionHeading>
                 <SectionTitle>All Tourists Spots</SectionTitle>
+            </div>
+            <div className="flex justify-end mb-6">
+                <details className="dropdown text-white">
+                    <summary className="m-1 btn bg-pmColor text-white">Sort By</summary>
+                    <ul className="p-2 shadow bg-pmColor menu dropdown-content z-[1] rounded-box w-52">
+                        <li onClick={handleSort}><a>Average Cost</a></li>
+                    </ul>
+                </details>
             </div>
             {
                 info.length === 0 ? <div role="alert" className="alert shadow-lg w-[90%] mx-auto">

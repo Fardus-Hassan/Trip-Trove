@@ -11,8 +11,8 @@ export default module.exports = withMT({
   theme: {
     extend: {
       fontFamily: {
-        heebo: ["Heebo", 'sans-serif'],
-        nunito: ["Nunito Sans", 'sans-serif'],
+        heebo: ["Montserrat", 'sans-serif'],
+        nunito: ["Poppins", 'sans-serif'],
       },
       colors: {
         pmColor: '#98C33A',
