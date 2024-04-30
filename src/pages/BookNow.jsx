@@ -6,7 +6,7 @@ const BookNow = () => {
 
 
             <div className="flex xl:flex-row xl:pt-0 pt-32 p-8 bg-black bg-opacity-50 flex-col justify-center xl:h-[100vh] min-h-[100vh] w-full items-center gap-10">
-                <div className="xl:w-[40%] xl:text-left text-center">
+                <div  data-aos="fade-down" data-aos-duration="1000"  className="xl:w-[40%] xl:text-left text-center">
 
                     <div className="xl:ml-24">
                         <SectionHeading>BOOKING</SectionHeading>
@@ -18,7 +18,7 @@ const BookNow = () => {
                     <p className="text-white font-heebo font-semibold mt-8">
                         Effortlessly book online for instant reservations, secure your spot, and enjoy a hassle-free experience every time.</p>
                 </div>
-                <form className="xl:w-[40%] w-full">
+                <form  data-aos="fade-down" data-aos-duration="1000"  className="xl:w-[40%] w-full">
                     <h1 className="text-white xl:text-left text-center text-[32px] sm:text-[40px] font-nunito font-bold mb-5">Book A Tour</h1>
                     <div className="flex sm:flex-row flex-col justify-center items-center gap-5">
                         <div className="relative w-full h-10 sm:mb-5">

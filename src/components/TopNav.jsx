@@ -8,7 +8,7 @@ import { FaInstagram } from "react-icons/fa";
 
 const TopNav = () => {
     return (
-        <div className="bg-black bg-opacity-90 text-white font-heebo font-medium md:flex hidden justify-between items-center gap-5 p-2">
+        <div data-aos="fade-down" data-aos-duration="1500" className="bg-black bg-opacity-90 text-white font-heebo font-medium md:flex hidden justify-between items-center gap-5 p-2">
             <div className="flex justify-center items-center gap-5">
                 <div className="flex justify-center items-center gap-1">
                     <FaLocationDot className="text-lg" />

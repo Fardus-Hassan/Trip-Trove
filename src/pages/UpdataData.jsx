@@ -65,7 +65,7 @@ const UpdataData = () => {
         <div className="bg-img4 xl:h-[100vh] min-h-[100vh]">
 
             <div className="flex xl:flex-row xl:pt-0 pt-32 p-8 bg-black bg-opacity-60 flex-col justify-center xl:h-[100vh] min-h-[100vh] w-full items-center gap-10">
-                <div className="xl:w-[40%] xl:text-left text-center">
+                <div  data-aos="fade-down" data-aos-duration="1000"  className="xl:w-[40%] xl:text-left text-center">
 
                     <div className="xl:ml-24">
                         <SectionHeading>UPDATE SPOT</SectionHeading>
@@ -75,7 +75,7 @@ const UpdataData = () => {
                     <h1 className="text-white text-[32px] sm:text-[40px] font-nunito font-bold">Manage Your Information</h1>
                     <p className="text-white font-heebo font-semibold mt-8">Take control of your data with our easy-to-use update feature. Update your personal details, preferences, and more securely and conveniently right here. Keep your information accurate and up-to-date effortlessly.</p>
                 </div>
-                <form onSubmit={handleSubmit(onSubmit)} className="xl:w-[40%] w-full">
+                <form  data-aos="fade-down" data-aos-duration="1000"  onSubmit={handleSubmit(onSubmit)} className="xl:w-[40%] w-full">
                     <h1 className="text-white xl:text-left text-center text-[32px] sm:text-[40px] font-nunito font-bold mb-5">Update Here</h1>
                     <div className="flex sm:flex-row flex-col justify-center items-center gap-5">
                         <div className="relative w-full h-10 sm:mb-5">

@@ -9,14 +9,14 @@ const PopularDestination = () => {
 
     return (
         <div className="mb-10 sm:mb-[100px] w-[98%] mx-auto">
-            <div className="text-center mb-10">
+            <div data-aos="fade-down" data-aos-duration="1000" className="text-center mb-10">
                 <SectionHeading>Countries</SectionHeading>
                 <SectionTitle>Popular Countries</SectionTitle>
             </div>
             <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-2">
                 {
                     loop.map((item, i) => (
-                        <Link key={i} to={`/details`}>
+                        <Link  data-aos="fade-down" data-aos-duration="1000" key={i} to={`/details`}>
                             <div className="relative">
                                 <img className="rounded-xl sm:rounded-3xl w-full h-full object-cover" src="https://images.pexels.com/photos/11356779/pexels-photo-11356779.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                                 <div className="w-full h-full bg-black absolute top-0 bg-opacity-50 hover:bg-opacity-30 duration-100 rounded-xl sm:rounded-3xl">

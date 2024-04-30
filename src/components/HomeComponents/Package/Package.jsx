@@ -100,7 +100,7 @@ const Package = () => {
 
     return (
         <div className="max-w-[1440px] w-[95%] mx-auto mb-10 sm:mb-[100px]">
-            <div className="text-center mb-10">
+            <div data-aos="fade-down" data-aos-duration="1000" className="text-center mb-10">
                 <SectionHeading>PACKAGES</SectionHeading>
                 <SectionTitle>Tourists Spots</SectionTitle>
             </div>
@@ -116,7 +116,7 @@ const Package = () => {
                 </button>
             )}
             {info.length > startIndex && (
-                <button className="sm:px-7 mt-5 mx-auto block px-5 sm:py-4 py-3 text-white font-heebo font-medium sm:font-semibold rounded-xl bg-pmColor mb-5" onClick={handleViewMore}>
+                <button data-aos="fade-down" data-aos-duration="1000" className="sm:px-7 mt-5 mx-auto block px-5 sm:py-4 py-3 text-white font-heebo font-medium sm:font-semibold rounded-xl bg-pmColor mb-5" onClick={handleViewMore}>
                     View More
                 </button>
             )}

@@ -56,7 +56,7 @@ const MyList = () => {
     return (
         <div className="max-w-[1440px] w-[95%] mx-auto md:pt-[150px] pt-[100px] pb-10">
             {
-                data.length == 0 ? <div role="alert" className="alert shadow-lg w-[90%] mx-auto">
+                data.length == 0 ? <div data-aos="fade-down" data-aos-duration="1000" role="alert" className="alert shadow-lg w-[90%] mx-auto">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-current shrink-0 w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     <div>
                         <h3 className="font-bold">No Information</h3>
@@ -64,7 +64,7 @@ const MyList = () => {
                     </div>
                     <Link to='/add-tourists-spot'><button className="btn btn-sm bg-pmColor text-white">Add</button></Link>
                 </div> : <div className="overflow-x-auto">
-                    <table className="table table-base table-pin-rows table-pin-cols font-heebo">
+                    <table data-aos="fade-down" data-aos-duration="1500" className="table table-base table-pin-rows table-pin-cols font-heebo">
                         <thead>
                             <tr>
                                 <th></th>

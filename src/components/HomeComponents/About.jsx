@@ -4,10 +4,10 @@ import SectionTitle from "../../utility/SectionTitle";
 const About = () => {
     return (
         <div className="max-w-[1440px] w-[95%] mx-auto mb-10 sm:mb-[100px] flex lg:flex-row flex-col justify-between items-center gap-10">
-            <div className="lg:w-[800px] md:h-[500px] h-[350px]">
+            <div  data-aos="fade-down" data-aos-duration="1000"  className="lg:w-[800px] md:h-[500px] h-[350px]">
                 <img className="w-full h-full object-cover rounded-3xl" src="https://tbbd-flight.s3.ap-southeast-1.amazonaws.com/blogiJR0K1sWVNFzinGC_l4r3IdsVLyxZfkr.jpg" alt="" />
             </div>
-            <div className="lg:max-w-[50%] lg:px-0 px-6">
+            <div  data-aos="fade-down" data-aos-duration="1000" className="lg:max-w-[50%] lg:px-0 px-6">
 
                 <h3 className="text-pmColor text-base sm:text-lg font-nunito font-bold relative inline-block">ABOUT US
                     <span className="w-10 h-[2px] sm:h-[3px] bg-pmColor block absolute top-2 left-[120%]"></span>

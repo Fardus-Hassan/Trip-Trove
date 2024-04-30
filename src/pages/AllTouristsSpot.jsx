@@ -30,20 +30,20 @@ const AllTouristsSpot = () => {
 
     return (
         <div className="max-w-[1440px] w-[95%] mx-auto md:pt-[150px] pt-[100px] pb-10 mb-10">
-            <div className="text-center mb-10">
+            <div data-aos="fade-down" data-aos-duration="1000" className="text-center mb-10">
                 <SectionHeading>Places</SectionHeading>
                 <SectionTitle>All Tourists Spots</SectionTitle>
             </div>
             <div className="flex justify-end mb-6">
                 <details className="dropdown text-white">
                     <summary className="m-1 btn bg-pmColor text-white">Sort By</summary>
-                    <ul className="p-2 shadow bg-pmColor menu dropdown-content z-[1] rounded-box w-52">
+                    <ul className="p-2 shadow bg-pmColor menu dropdown-content z-[1]  rounded-box w-52">
                         <li onClick={handleSort}><a>Average Cost</a></li>
                     </ul>
                 </details>
             </div>
             {
-                info.length === 0 ? <div role="alert" className="alert shadow-lg w-[90%] mx-auto">
+                info.length === 0 ? <div data-aos="fade-down" data-aos-duration="1000" role="alert" className="alert shadow-lg w-[90%] mx-auto">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-current shrink-0 w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     <div>
                         <h3 className="font-bold">No Information</h3>
@@ -53,7 +53,7 @@ const AllTouristsSpot = () => {
                 </div> : <div className="grid 2xl:grid-cols-3 md:grid-cols-2 gap-6">
                     {
                         info.map(item => (
-                            <div key={item._id} className="shadow-2xl rounded-3xl mb-6">
+                            <div data-aos="fade-down" data-aos-duration="1500" key={item._id} className="shadow-2xl rounded-3xl mb-6">
                                 <div className="h-[350px]">
                                     <img className="h-[350px] rounded-t-3xl w-full" src={item.img[0]} alt="" />
                                 </div>

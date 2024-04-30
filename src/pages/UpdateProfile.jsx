@@ -21,7 +21,7 @@ const UpdateProfile = () => {
         <div className="bg-img3 mx-auto md:min-h-[100vh] text-white min-h-[100vh] flex justify-center items-center">
             {/* <SiteTittle title={'Update-Profile'}></SiteTittle> */}
             <div className=" md:flex-row bg-black bg-opacity-50 w-full min-h-[100vh] flex-col gap-10 flex justify-center items-center md:pt-0 pt-32 pb-6">
-                <div className="md:border-r-2 md:border-b-0 border-b-2 md:w-fit w-[80%] border-pmColor border-dashed md:pb-0 pb-6 md:pr-10">
+                <div  data-aos="fade-down" data-aos-duration="1000"  className="md:border-r-2 md:border-b-0 border-b-2 md:w-fit w-[80%] border-pmColor border-dashed md:pb-0 pb-6 md:pr-10">
                     <div className="flex lg:flex-row gap-6 flex-col justify-center items-center">
                         <div>
                             <img className="rounded-[100%] h-[250px] object-cover w-[250px]" src={user.photoURL || "https://cdn-icons-png.flaticon.com/512/64/64572.png"} alt="" />
@@ -32,7 +32,7 @@ const UpdateProfile = () => {
                         </div>
                     </div>
                 </div>
-                <form onSubmit={handleUpdateProfile} className="space-y-8 w-[80%] lg:w-[25%] md:w-[40%]">
+                <form  data-aos="fade-down" data-aos-duration="1000"  onSubmit={handleUpdateProfile} className="space-y-8 w-[80%] lg:w-[25%] md:w-[40%]">
 
                     <div className="relative w-full h-10 mb-5">
                         <input

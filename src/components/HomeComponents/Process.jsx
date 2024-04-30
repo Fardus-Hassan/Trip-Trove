@@ -7,12 +7,12 @@ import { FaPlane } from "react-icons/fa";
 const Process = () => {
     return (
         <div className="max-w-[1440px] w-[95%] mx-auto mb-10 sm:mb-[100px]">
-            <div className="text-center">
+            <div data-aos="fade-down" data-aos-duration="1000" className="text-center">
                 <SectionHeading>PROCESS</SectionHeading>
                 <SectionTitle>3 Easy Steps</SectionTitle>
             </div>
             <div className="mt-24 grid lg:grid-cols-3 sm:grid-cols-2 gap-6 *:rounded-3xl">
-                <div className="border border-pmColor border-solid text-center p-5 relative">
+                <div data-aos="fade-down" data-aos-duration="1000" className="border border-pmColor border-solid text-center p-5 relative">
                     <span className="bg-pmColor inline-block p-4 absolute top-[0] left-[50%] translate-y-[-60%] translate-x-[-50%] text-white text-7xl rounded-full">
                         <TbWorld />
                     </span>
@@ -23,7 +23,7 @@ const Process = () => {
                     </div>
                     <p className="text-base text-center text-black text-opacity-50 font-heebo font-bold">How about we imagine traveling to the breathtaking landscapes of Iceland? Or perhaps you have a specific type of destination in mind?</p>
                 </div>
-                <div className="border sm:mt-0 mt-14 border-pmColor border-solid text-center p-5 relative">
+                <div data-aos="fade-down" data-aos-duration="1000" className="border sm:mt-0 mt-14 border-pmColor border-solid text-center p-5 relative">
                     <span className="bg-pmColor inline-block p-4 absolute top-[0] left-[50%] translate-y-[-60%] translate-x-[-50%] text-white text-7xl rounded-full">
                         <TbCoinTaka />
                     </span>
@@ -35,7 +35,7 @@ const Process = () => {
                     <p className="text-base text-center text-black text-opacity-50 font-heebo font-bold">
                         Securely pay for your purchases online for a hassle-free and convenient shopping experience anytime, anywhere.</p>
                 </div>
-                <div className="border border-pmColor lg:mt-0 mt-14 border-solid text-center p-5 relative">
+                <div data-aos="fade-down" data-aos-duration="1000" className="border border-pmColor lg:mt-0 mt-14 border-solid text-center p-5 relative">
                     <span className="bg-pmColor inline-block p-4 absolute top-[0] left-[50%] translate-y-[-60%] translate-x-[-50%] text-white text-7xl rounded-full">
                         <FaPlane />
                     </span>

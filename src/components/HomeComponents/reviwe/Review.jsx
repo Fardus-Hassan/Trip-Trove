@@ -20,11 +20,11 @@ const Review = () => {
 
     return (
         <div className="max-w-[1440px] mx-auto w-[95%]">
-            <div className="text-center mb-10">
+            <div data-aos="fade-down" data-aos-duration="1000" className="text-center mb-10">
                 <SectionHeading>TESTIMONIAL</SectionHeading>
                 <SectionTitle>Our Clients Say!!!</SectionTitle>
             </div>
-            <div>
+            <div data-aos="fade-down" data-aos-duration="1000">
                 <Swiper
                     spaceBetween={30}
                     centeredSlides={true}

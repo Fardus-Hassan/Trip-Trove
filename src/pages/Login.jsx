@@ -70,7 +70,7 @@ const Login = () => {
                             <p className="text-white font-heebo font-semibold mt-8">
                                 Welcome to a world of possibilities! Sign in now to explore our website's full potential and discover amazing experiences tailored just for you.</p>
                         </div> */}
-                        <div className="border border-pmColor lg:min-w-[35%] lg:mt-0 mt-[100px] rounded-3xl p-5 lg:p-10">
+                        <div  data-aos="fade-down" data-aos-duration="1000"  className="border border-pmColor lg:min-w-[35%] lg:mt-0 mt-[100px] rounded-3xl p-5 lg:p-10">
                             <form onSubmit={handleSubmit(onSubmit)}>
                                 <h1 className="text-white text-center text-[32px] sm:text-[40px] font-nunito font-bold mb-5">Login Here</h1>
 

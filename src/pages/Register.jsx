@@ -73,7 +73,7 @@ const Register = () => {
     return (
         <div>
             <div className="relative">
-                <div className="">
+                <div    className="">
                     <img className="w-full min-h-[100vh] lg:h-[100vh] md:min-h-[calc(100vh-52px)] object-center object-cover" src="https://images.pexels.com/photos/6300606/pexels-photo-6300606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                     <div className="bg-black absolute top-0 w-full h-full bg-opacity-70"></div>
                     <div className="absolute w-[95%] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
@@ -85,7 +85,7 @@ const Register = () => {
                             <p className="text-white font-heebo font-semibold mt-8">
                                 Welcome to a world of possibilities! Sign in now to explore our website's full potential and discover amazing experiences tailored just for you.</p>
                         </div> */}
-                            <div className="border border-pmColor lg:min-w-[35%] lg:mt-0 mt-[100px] rounded-3xl p-5 lg:p-10">
+                            <div data-aos="fade-down" data-aos-duration="1000" className="border border-pmColor lg:min-w-[35%] lg:mt-0 mt-[100px] rounded-3xl p-5 lg:p-10">
                                 <form onSubmit={handleSubmit(onSubmit)}>
                                     <h1 className="text-white text-center text-[32px] sm:text-[40px] font-nunito font-bold mb-5">Create Account</h1>
 

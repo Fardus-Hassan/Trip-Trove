@@ -3,11 +3,11 @@ import SectionHeading from "../../utility/SectionHeading";
 
 const Booking = () => {
     return (
-        <div className="bg-img relative md:w-[98%] w-[95%] mx-auto rounded-3xl mb-10 sm:mb-[100px]">
+        <div data-aos="fade-down" data-aos-duration="1000" className="bg-img relative md:w-[98%] w-[95%] mx-auto rounded-3xl mb-10 sm:mb-[100px]">
 
 
             <div className="flex xl:flex-row bg-black bg-opacity-50 rounded-3xl flex-col justify-center p-8 lg:p-20 lg:py-36 items-center gap-10">
-                <div className="xl:w-[40%] xl:text-left text-center">
+                <div data-aos="fade-down" data-aos-duration="1500" className="xl:w-[40%] xl:text-left text-center">
 
                     <div className="xl:ml-24">
                         <SectionHeading>BOOKING</SectionHeading>
@@ -19,7 +19,7 @@ const Booking = () => {
                     <p className="text-white font-heebo font-semibold mt-8">
                         Effortlessly book online for instant reservations, secure your spot, and enjoy a hassle-free experience every time.</p>
                 </div>
-                <form className="xl:w-[40%] w-full">
+                <form data-aos="fade-down" data-aos-duration="1000" className="xl:w-[40%] w-full">
                     <h1 className="text-white xl:text-left text-center text-[32px] sm:text-[40px] font-nunito font-bold mb-5">Book A Tour</h1>
                     <div className="flex sm:flex-row flex-col justify-center items-center gap-5">
                         <div className="relative w-full h-10 sm:mb-5">

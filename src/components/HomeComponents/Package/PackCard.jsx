@@ -9,7 +9,7 @@ const packCard = ({item}) => {
     const  { short_description, travel_time, totalVisitorsPerYear, seasonality, average_cost, location, tourists_spot_name, img: [image, image2, image3], country_name, _id } = item;
 
     return (
-        <div className="shadow-2xl rounded-3xl mb-6">
+        <div  data-aos="fade-down" data-aos-duration="1000"  className="shadow-2xl rounded-3xl mb-6">
             <div className="h-[350px]">
                 <img className="h-[350px] rounded-t-3xl w-full" src={image} alt="" />
             </div>
