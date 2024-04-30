@@ -11,14 +11,31 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import Package from "../components/HomeComponents/Package/Package";
 import { Link, useLoaderData } from "react-router-dom";
+import SectionHeading from "../utility/SectionHeading";
+import SectionTitle from "../utility/SectionTitle";
+import { useEffect, useState } from "react";
+import CountryCard from "./CountryCard";
 
 const Details = () => {
 
     const info = useLoaderData();
 
     const { short_description, travel_time, totalVisitorsPerYear, seasonality, average_cost, location, tourists_spot_name, img, country_name, _id } = info;
+
+    const [data, setData] = useState([]);
+
+    console.log(data);
+
+    useEffect(() => {
+        fetch('http://localhost:3000/touristSpots')
+        .then(res => res.json())
+        .then(data => {
+            const country = data.filter(item => item.country_name === country_name)
+            setData(country)
+        })
+    },[country_name])
+
 
 
 
@@ -75,9 +92,19 @@ const Details = () => {
                     </div>
                 </div>
 
+            <div className="my-10 sm:mt-[100px]">
+                <div data-aos="fade-down" data-aos-duration="1000" className="text-center mb-10">
+                    <SectionHeading>{country_name}</SectionHeading>
+                    <SectionTitle>Tourists Spots</SectionTitle>
+                </div>
+                <div className="grid 2xl:grid-cols-3 md:grid-cols-2 gap-6">
+                    {
+                        data.map(item => (
+                            <CountryCard item={item} key={item._id}></CountryCard>
+                        ))
+                    }
+                </div>
             </div>
-            <div className="mt-10 sm:mt-[100px]">
-                <Package></Package>
             </div>
         </>
     );

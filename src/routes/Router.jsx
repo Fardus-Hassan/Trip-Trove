@@ -12,6 +12,7 @@ import Details from "../pages/Details";
 import UpdataData from "../pages/UpdataData";
 import Error from "../pages/Error";
 import BookNow from "../pages/BookNow";
+import Country from "../pages/Country";
 
 
 const Router = createBrowserRouter([
@@ -65,6 +66,10 @@ const Router = createBrowserRouter([
             {
                 path: "/book-now",
                 element: <BookNow></BookNow>
+            },
+            {
+                path: '/country/:country_name',
+                element: <Country></Country>
             }
 
         ],

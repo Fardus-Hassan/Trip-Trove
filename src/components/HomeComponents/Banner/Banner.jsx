@@ -11,9 +11,20 @@ import './banner.css';
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Typewriter } from 'react-simple-typewriter'
+import { Link } from 'react-router-dom';
 
 
 const Banner = () => {
+
+  const [value, setValue] = useState('')
+
+  console.log(value);
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const search = e.target.value
+    setValue(search)
+  }
 
 
 
@@ -61,10 +72,12 @@ const Banner = () => {
             cursor='pointer'
           /></span></h1>
           <p className='text-white lg:text-[16px] text-[14px] font-heebo mt-4 mb-8 max-w-[700px] mx-auto'>Discover Seamless Travel Solutions with Expert Tourism Management Services. Plan, Explore, and Thrive with Us !</p>
-          <label className="input input-bordered flex md:w-[700px] w-full mx-auto md:flex-row flex-col items-center md:h-14 gap-2 rounded-full outline-none border-none">
-            <input type="text" className="grow w-full rounded-3xl font-heebo md:text-left text-center md:pt-0 pt-3 font-medium border-none outline-none" placeholder="Search" />
-            <button className="bg-pmColor px-5 rounded-3xl text-base py-2 text-white md:mt-0 mt-3 font-heebo font-semibold">Search</button>
-          </label>
+          <form className="input input-bordered flex md:w-[700px] w-full mx-auto md:flex-row flex-col items-center md:h-14 gap-2 rounded-full outline-none border-none">
+            <input onChange={handleSubmit} type="text" name='search' className="grow w-full rounded-3xl font-heebo md:text-left text-center md:pt-0 pt-3 font-medium border-none outline-none" placeholder="Search" />
+            <Link to={`/country/${value}`} className="inline-block">
+              <button type="submit" className="bg-pmColor px-5 rounded-3xl text-base py-2 text-white md:mt-0 mt-3 font-heebo font-semibold">Search</button>
+            </Link>
+          </form>
         </div>
       </Swiper>
     </div>
