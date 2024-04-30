@@ -28,7 +28,7 @@ const Details = () => {
     console.log(data);
 
     useEffect(() => {
-        fetch('http://localhost:3000/touristSpots')
+        fetch('https://trip-trove-server-oized1a22-fardus-projects.vercel.app/touristSpots')
         .then(res => res.json())
         .then(data => {
             const country = data.filter(item => item.country_name === country_name)

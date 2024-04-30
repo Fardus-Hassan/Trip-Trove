@@ -56,12 +56,12 @@ const Router = createBrowserRouter([
             {
                 path:"/update-data/:id",
                 element: <PrivateRoute><UpdataData></UpdataData></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:3000/touristSpots/${params.id}`)
+                loader: ({params}) => fetch(`https://trip-trove-server-oized1a22-fardus-projects.vercel.app/touristSpots/${params.id}`)
             },
             {
                 path:"/details/:id",
                 element: <PrivateRoute><Details></Details></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:3000/touristSpots/${params.id}`)
+                loader: ({params}) => fetch(`https://trip-trove-server-oized1a22-fardus-projects.vercel.app/touristSpots/${params.id}`)
             },
             {
                 path: "/book-now",

@@ -3,13 +3,12 @@ import SectionHeading from "../../utility/SectionHeading";
 import SectionTitle from "../../utility/SectionTitle";
 import { useEffect, useState } from "react";
 
-
 const PopularDestination = () => {
 
     const [data, setData] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3000/country')
+        fetch('https://trip-trove-server-oized1a22-fardus-projects.vercel.app/country')
             .then(res => res.json())
             .then(data => {
                 setData(data);

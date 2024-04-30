@@ -15,7 +15,7 @@ const AllTouristsSpot = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:3000/touristSpots')
+        fetch('https://trip-trove-server-oized1a22-fardus-projects.vercel.app/touristSpots')
             .then(res => res.json())
             .then(data => {
                 setInfo(data)

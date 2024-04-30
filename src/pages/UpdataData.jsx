@@ -30,7 +30,7 @@ const UpdataData = () => {
         const { short_description, travel_time, totalVisitorsPerYear, seasonality, average_cost, location, tourists_spot_name, image, country_name, image2, image3 } = data;
 
 
-        fetch(`http://localhost:3000/touristSpots/${_id}`, {
+        fetch(`https://trip-trove-server-oized1a22-fardus-projects.vercel.app/touristSpots/${_id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

@@ -4,6 +4,7 @@ const withMT = require("@material-tailwind/react/utils/withMT");
 
 
 export default module.exports = withMT({
+  darkMode : "selector",
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -21,9 +22,9 @@ export default module.exports = withMT({
     },
   },
   plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light", "dark"],
+  },
 
-  // daisyui: {
-  //   themes: ["light", "night"],
-  // },
 });
 

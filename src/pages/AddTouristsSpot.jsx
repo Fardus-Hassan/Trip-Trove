@@ -29,7 +29,7 @@ const AddTouristsSpot = () => {
 
 
 
-        fetch('http://localhost:3000/touristSpots', {
+        fetch('https://trip-trove-server-oized1a22-fardus-projects.vercel.app/touristSpots', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

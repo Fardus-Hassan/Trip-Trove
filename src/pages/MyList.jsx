@@ -13,7 +13,7 @@ const MyList = () => {
     const [data, setData] = useState([])
 
     useEffect(()=>{
-        fetch(`http://localhost:3000/touristSpots/myList/${user.email}`)
+        fetch(`https://trip-trove-server-oized1a22-fardus-projects.vercel.app/touristSpots/myList/${user.email}`)
         .then(response => response.json())
         .then(data =>{
             console.log(data);
@@ -34,7 +34,7 @@ const MyList = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:3000/touristSpots/${_id}`, {
+                fetch(`https://trip-trove-server-oized1a22-fardus-projects.vercel.app/touristSpots/${_id}`, {
                     method: "DELETE",
                 })
                 .then(res => res.json())

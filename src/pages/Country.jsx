@@ -12,7 +12,7 @@ const Country = () => {
     const [countries, setCountries] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3000/touristSpots')
+        fetch('https://trip-trove-server-oized1a22-fardus-projects.vercel.app/touristSpots')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -29,7 +29,7 @@ const Country = () => {
                     <span className="loading loading-bars loading-lg text-pmColor"></span>
                 </div> : <div>
                     <div data-aos="fade-down" data-aos-duration="1000" className="text-center mb-10">
-                        <SectionHeading>{country_name}</SectionHeading>
+                        <SectionHeading>{country_name.toUpperCase()}</SectionHeading>
                         <SectionTitle>Tourists Spots</SectionTitle>
                     </div>
                     <div className="grid 2xl:grid-cols-3 md:grid-cols-2 gap-6">

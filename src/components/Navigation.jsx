@@ -20,6 +20,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { Link, NavLink } from "react-router-dom";
 import { GlobalStateContext } from "../GlobalContext/GlobalContext";
+import ThemeToggle from "./ThemeToggle";
 
 
 
@@ -65,6 +66,7 @@ function ProfileMenu() {
               className="border border-pmColor p-0.5"
               src={user?.photoURL || "https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png"}
             />
+          
             <ChevronDownIcon
               strokeWidth={2.5}
               className={`h-3 w-3 transition-transform ${isMenuOpen ? "rotate-180" : ""
@@ -198,7 +200,7 @@ function NavList() {
       {
         user && <Typography
 
-          className="p-2 font-heebo font-semibold text-sm mr-6 text-black hover:text-pmColor"
+          className="p-2 font-heebo font-semibold text-sm text-black hover:text-pmColor"
         >
           <NavLink className={({ isActive, isPending }) =>
             isActive
@@ -269,10 +271,13 @@ const Navigation = () => {
         >
           <Bars2Icon className="h-6 w-6" />
         </IconButton>
+        <div className="sm:mx-6 mr-1">
+          <ThemeToggle></ThemeToggle>
+        </div>
 
         {
           user ? "" : <Link to='/login'>
-            <Button size="sm" variant="text" className={`bg-pmColor ${user ? "" : "sm:ml-6"} hover:text-black text-white lg:mr-6`}>
+            <Button size="sm" variant="text" className={`bg-pmColor hover:text-black text-white lg:mr-6`}>
               <span>Log In</span>
             </Button>
           </Link>
